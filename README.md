@@ -242,7 +242,9 @@ to say what this is a tribute to.
 
 The code in this repository is original. It was written from the rules in the
 Interstel manual and from watching the 1987 game run, and contains no code
-from the original game or from Walter Bright's later Empire source. No
+from the original game or from Walter Bright's later Empire source. The notes
+on the original file formats cite his published source where it confirmed a
+format; no code from it is used. No
 Interstel files are included: the importer converts files from your own copy
 into a git-ignored folder, and the published game uses only the built-in art.
 
