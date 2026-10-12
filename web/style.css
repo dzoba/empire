@@ -1,0 +1,35 @@
+:root {
+  --bg: #000;
+  --fg: #55ffff;
+}
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  overflow: hidden;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#screen {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  outline: none;
+  cursor: default;
+}
+#status {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  text-align: center;
+  font: 14px/1.4 ui-monospace, Menlo, Consolas, monospace;
+  color: var(--fg);
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+#status:empty {
+  display: none;
+}

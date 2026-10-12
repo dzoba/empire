@@ -1,0 +1,19 @@
+# Build output
+/target
+/web/empire.wasm
+
+# Third-party reference material: downloads, disk images, cloned repos, manuals.
+# Interstel files are commercial; Walter Bright's source is personal-use only.
+/reference/
+
+# Assets converted from the user's own Interstel disk (see tools/interstel_import)
+/assets/original/
+
+.DS_Store
+*.swp
+
+# Built web assets
+/web/assets/original/
+
+# Local editor and agent settings
+/.claude/

@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = ["crates/core", "crates/app", "crates/web", "crates/cli"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "LicenseRef-All-Rights-Reserved"
+publish = false
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+empire-core = { path = "crates/core" }
+empire-app = { path = "crates/app" }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 1
+
+[workspace.lints.clippy]
+# Drawing helpers take (frame, font, x, y, text, colours...) by design.
+too_many_arguments = "allow"

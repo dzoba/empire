@@ -1,0 +1,18 @@
+[package]
+name = "empire-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "empire-cli"
+path = "src/main.rs"
+
+[dependencies]
+empire-core.workspace = true
+empire-app.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true

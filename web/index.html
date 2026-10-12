@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empire</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect width='8' height='8' fill='%23000'/%3E%3Cpath d='M1 1h2v2H1zm4 0h2v2H5zM1 5h6v2H1z' fill='%2355ffff'/%3E%3Cpath d='M3 3h2v2H3z' fill='%23ff55ff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="screen" width="320" height="200" tabindex="0" aria-label="Empire game screen"></canvas>
+<div id="status" role="status">LOADING EMPIRE...</div>
+<input id="file" type="file" hidden>
+<script type="module">
+  // Load the game code fresh on every visit, so a rebuild is never hidden by
+  // the browser cache.
+  import(`./main.js?v=${Date.now()}`);
+</script>
+</body>
+</html>
