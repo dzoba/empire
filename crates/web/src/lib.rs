@@ -13,7 +13,9 @@ thread_local! {
     static OUT: RefCell<Vec<u8>> = const { RefCell::new(Vec::new()) };
 }
 
+// Imported from the JavaScript host (web/main.js, `imports.env`).
 #[cfg(target_arch = "wasm32")]
+#[link(wasm_import_module = "env")]
 extern "C" {
     fn host_log(ptr: *const u8, len: usize);
 }
